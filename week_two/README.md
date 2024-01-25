@@ -54,7 +54,7 @@ Make sure to run this command in the root directory of the project (the director
 python main.py
 ```
 
-Replace `main.py` with the actual entry point of your project.
+Replace `main.py` with the actual entry point of your project or run the specific file you want.
 
 ## Contributing
 
