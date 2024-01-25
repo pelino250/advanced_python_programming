@@ -1,41 +1,62 @@
-Logging in Python is a built-in module that allows you to track events in your application and record them in different outputs. It's a flexible system that you can configure to meet your needs. Here are the main components:
+# Week Three Project
 
-- **Logger**: This is the object that your application will directly interact with. It provides the interface that application code directly uses.
+This is the `week_three` project. It's a Python project that focuses on understanding and implementing logging in Python.
 
-- **Handler**: Handlers send the log records (created by loggers) to the appropriate destination like console or a file.
+## Installation
 
-- **Formatter**: Formatters specify the layout of log records in the final output.
+Follow these steps to install and run the project:
 
-## Logging Levels
-1.  **DEBUG**: Detailed information, typically of interest only when diagnosing problems.
-2. **INFO**: Confirmation that things are working as expected.
-3. **WARNING**: An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.
-4. **ERROR**: Due to a more serious problem, the software has not been able to perform some function.
-5. **CRITICAL**: A serious error, indicating that the program itself may be unable to continue running.
+1. **Clone the repository**: First, you need to clone the repository to your local machine. You can do this with the following command:
 
+```bash
+git clone https://github.com/iPelino/advanced_python_programming.git
+```
 
-## Logging Best Practices
+2. **Switch to the `week_three` branch**: After cloning the repository, you need to switch to the `week_three` branch. You can do this with the following command:
 
-Here are some common best practices for logging in Python:
+```bash
+git checkout week_three
+```
 
-1. **Use the built-in logging module**: Python's built-in logging module is powerful and flexible. It provides all the functionality you need for most applications, so there's usually no need to use a third-party library.
+3. **Install Python**: If you don't have Python installed on your machine, you can download it from the official website: https://www.python.org/downloads/
 
-2. **Configure logging at the application level**: It's a good practice to configure your loggers, handlers, and formatters at the application level. This ensures that all parts of your application are using the same logging configuration.
+4. **Create a virtual environment**: It's a good practice to create a virtual environment for your Python projects. This allows you to isolate the project dependencies. You can create a virtual environment using the following command:
 
-3. **Use different log levels appropriately**: The logging module provides several log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL). Use these levels appropriately to categorize your log messages. For example, use DEBUG for detailed information for diagnosing problems, INFO for confirming things are working as expected, WARNING for indicating something unexpected happened, and ERROR and CRITICAL for indicating serious problems.
+```bash
+python3 -m venv env
+```
+Then, activate the virtual environment with this command:
 
-4. **Don't use the root logger directly**: The root logger is the base logger that all other loggers are derived from. It's a best practice to create and use your own logger(s) instead of using the root logger directly. This gives you more control and flexibility over your logging configuration.
+On Windows:
+```bash
+env\Scripts\activate
+```
+On Unix or MacOS:
+```bash
+source env/bin/activate
+```
+5. **Install Pip**: Pip is a package manager for Python. It's used to install and manage Python packages. If you don't have Pip installed, you can install it by following the instructions here: https://pip.pypa.io/en/stable/installation/
 
-5. **Use exception logging methods for exceptions**: The logging module provides methods for logging exceptions (`exception()`, `error()`, etc.). These methods automatically include exception information in the log message, which can be very helpful for debugging.
+6. **Install the required packages**: This project requires some Python packages. You can install them with the following command:
 
-6. **Don't log sensitive information**: Be careful not to log sensitive information like passwords, API keys, or personally identifiable information (PII). This information could be exposed if your logs are not properly secured.
+```bash
+pip install -r requirements.txt
+```
 
-7. **Rotate your log files**: If you're logging to files, it's a good practice to rotate your log files periodically. This prevents your log files from growing indefinitely and consuming all your disk space. The `RotatingFileHandler` and `TimedRotatingFileHandler` classes in the logging module can help with this.
+Make sure to run this command in the root directory of the project (the directory that contains the `requirements.txt` file).
 
-8. **Use structured logging for complex applications**: For complex applications or microservices architectures, consider using structured logging. Structured logs are easier to process and analyze programmatically. The `json` module can help you create structured log messages.
+7. **Run the project**: After installing the required packages, you can run the project with the following command:
 
-9. **Include context information in your log messages**: Including context information (like user ID, request ID, etc.) in your log messages can make it easier to correlate events and diagnose problems.
+```bash
+python main.py
+```
 
-10. **Use asynchronous logging for performance-critical applications**: If logging is a bottleneck in your application, consider using asynchronous logging. This allows your application to continue processing while the log messages are being handled in the background. Be aware that this can make your logging configuration more complex and can potentially result in lost log messages if your application crashes.
+Replace `main.py` with the actual entry point of your project or the file you wish to run.
 
+## Contributing
 
+If you want to contribute to this project, please create a new branch and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
