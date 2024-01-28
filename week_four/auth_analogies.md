@@ -1,0 +1,7 @@
+**Basic Authentication**: Imagine going to a club where the bouncer asks for your ID. You show your ID (username and password), and if it's valid, you're allowed in. This is similar to Basic Authentication, where you provide your credentials with each request, and if they're valid, you're granted access.
+
+**Session Authentication**: Consider a music festival where you get a wristband on your first entry. For subsequent entries, you just show your wristband instead of buying a new ticket. This is like Session Authentication, where you log in once, get a session ID (the wristband), and use it for subsequent requests.
+
+**Token Authentication**: Think of it as a hotel key card system. When you check in, you are given a key card (token). This key card is used to access your room (resources). You don't have to verify your identity every time, the key card does that for you. This is similar to Token Authentication, where after login, you get a token and use it for subsequent requests.
+
+**OAuth**: Imagine you're at a bar, and you want to open a tab. Instead of giving your credit card to the bartender, you give them a token from your bank. The bartender can charge drinks to your tab using the token, without ever seeing your credit card number. This is like OAuth, where you give third-party apps a token to access your data without sharing your password.

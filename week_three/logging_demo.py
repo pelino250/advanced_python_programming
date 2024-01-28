@@ -85,4 +85,4 @@ logger.critical('This is a critical message')
 logger.removeHandler(custom_handler)
 
 #  EXERCISE
-# Path: week_three/exercise.py
+# Path: week_three/week_four_exercise.py
