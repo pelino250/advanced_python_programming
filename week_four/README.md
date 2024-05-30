@@ -48,6 +48,15 @@ def login_view(request):
         else:
             # Return an 'invalid login' error message.
             ...
+        ## delete me
+        # def test_args(a, b):
+        #     return a + b
+        # # test_args(2, 1)
+        # 
+        # def test_kwargs(a=None, b=None, c=None, d=None):
+        #     return a + b
+        # test_kwargs(c=2, b=1)
+
 ```
 
 **Token Authentication**
@@ -98,6 +107,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
+# example.com/test/ -> MyView
 class MyView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
